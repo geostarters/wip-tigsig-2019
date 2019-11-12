@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Geostart work in progress - Forum TIGSIG 2019</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/geostart.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +26,139 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background="img/portada.png">
+					<div class="titol">
+						<h5>Geostart Work in progress</h5>
+					</div>
+				</section>
+				<section><img data-src="img/wip.gif"></section>
+				<section>
+					<section><h2>Geostart</h2><p>Grup de desenvolupament, innovació i prototipatge de l’Institut Cartogràfic i Geològic de Catalunya. Productes i serveis basats en geoinformació.</p></section>
+					<section>
+						<div class="flex-table row" role="rowgroup">
+							<div class="flex-row" role="cell">Montse</div>
+							<div class="flex-row" role="cell">In-house Tech Mastermind</div>
+						</div>
+						<div class="flex-table row" role="rowgroup">
+							<div class="flex-row" role="cell">Marc</div>
+							<div class="flex-row" role="cell">Lord Geospatial Dreamer</div>
+						</div>
+						<div class="flex-table row" role="rowgroup">
+							<div class="flex-row" role="cell">Sergi</div>
+							<div class="flex-row" role="cell">Startup Prophet</div>
+						</div>
+						<div class="flex-table row" role="rowgroup">
+							<div class="flex-row" role="cell">Raf</div>
+							<div class="flex-row" role="cell">Mystic Chief Visioneer</div>
+						</div>
+						<div class="flex-table row" role="rowgroup">
+							<div class="flex-row" role="cell">Victor</div>
+							<div class="flex-row" role="cell">Master Maker of Things</div>
+						</div>
+						<div class="flex-table row" role="rowgroup">
+							<div class="flex-row" role="cell">Bolo</div>
+							<div class="flex-row" role="cell">Refactoring Messiah</div>
+						</div>
+						<div class="flex-table row tachado" role="rowgroup">
+							<div class="flex-row" role="cell">Jessica</div>
+							<div class="flex-row" role="cell">Mobile Platform Pioneer</div>
+						</div>
+						<div class="flex-table row tachado" role="rowgroup">
+							<div class="flex-row" role="cell">Isaac</div>
+							<div class="flex-row" role="cell">Pixel Ninja</div>
+						</div>
+					</section>
+					<section><h1 class="red">We are hiring!!!</h1><small>Desenvolupador web i/o mòbil</small></section>
+					<section>
+						<img data-src="img/betaportal.png"><h2>https://betaportal.icgc.cat/</h2>
+					</section>
+				</section>
+				<section>
+						<section><img data-src="img/geocoder.gif"><h2>Nou geocodificador</h2><p class="red">BETA</p></section>
+						<section>
+							<div class="flex-table row" role="rowgroup">
+								<div class="flex-row" role="cell">Antic geocoder</div>
+								<div class="flex-row" role="cell">Java, Oracle, SOAP, XML, registre, desenvolupament propi</div>
+							</div>
+							<div class="flex-table row red" role="rowgroup">
+								<div class="flex-row" role="cell">Nou geocoder</div>
+								<div class="flex-row" role="cell">Pelias, elasticSearch, REST, JSON, open</div>
+							</div>
+						</section>
+						<section><h2>https://betaserver2.icgc.cat/pelias/v1/</h2></section>
+						<section><h2>Autocomplete</h2><p>https://betaserver2.icgc.cat/pelias/v1/autocomplete?text=c.%20Balm</p></section>
+						<section><h2>Search</h2><p>https://betaserver2.icgc.cat/pelias/v1/search?text=c.%20Balmes%201%2Cbarcelona</p></section>
+						<section><h2>Reverse</h2><p>https://betaserver2.icgc.cat/pelias/v1/reverse?point.lat=41.56&point.lon=1.99</p></section>
+				</section>
+				<section>
+					<section><img data-src="img/keiaki.gif"><h2>Keiaki API</h2><p class="red">BETA</p></section>
+					<section><h2>https://betaserver2.icgc.cat/keiaki/api/${lon}/${lat}</h2></section>
+					<section><img data-src="img/keiaki.png"><h2>https://betaserver2.icgc.cat/keiaki/api/2/41.5</h2></section>
+					<section>
+						<ul>
+							<li>Municipis, Comarca, Provincia</li>
+							<li>Abps - Àrea Bàsica Policial</li>
+							<li>Abss - Àrea Bàsica de Salut</li>
+							<li>Geocodificador - Reverse</li>
+							<li class="red">Polígons SOC</li>
+							<li class="red">Usos del Sól</li>
+							<li class="red">MUC</li>
+							<li class="red">Geológic</li>
+							<li class="red">...</li>
+						</ul>
+					</section>
+					<section>
+						<h2>IDEA: endpoints tematics (subconjunts)</h2>
+						<ul>
+							<li>Medi Ambient</li>
+							<li>Emergències</li>
+							<li>Urbanisme</li>
+							<li>...</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section><img data-src="img/balancer.gif"><h2>Tile Balancer</h2><p class="red">ALPHA</p></section>
+					<section><h2>Problema: combinar múltiples serveis de tessel·les</h2>
+						<ul>
+							<li>Càrrega de múltiples capes al visor</li>
+							<li>Càrrega de tessel·les que mai es veuran</li>
+						</ul>
+					</section>
+					<section><h2>Solucions</h2><p>
+						<ul>
+							<li>leaflet-boundary-canvas</li>
+							<li>logica en l'aplicaciò</li>
+							<li class="red">lògica al servidor</li>
+						</ul>
+					</p>
+					</section>
+					<section><h2>lògica al servidor</h2><p>
+							<ul>
+								<li>tessel·la fora de catalunya - petició directa a l'servidor extern</li>
+								<li>tessel·la dins de catalunya - petició directa a servidor de l'ICGC</li>
+								<li class="red">tessel·la a la frontera de catalunya - combinació d'imatges utilitzant una màscara de polígon de catalunya</li>
+							</ul>
+						</p>
+					</section>
+					<section><img data-src="img/tileBalancer_simple.png"><p>https://XXXX.icgc.cat/api/services/simple/${z}/${x}/${y}.png</p></section>
+					<section><img data-src="img/tileBalancer_orto.png"><p>https://XXXX.icgc.cat/api/services/orto/${z}/${x}/${y}.png</p></section>
+					<section><img data-src="img/tileBalancer_topo.png"><p>https://XXXX.icgc.cat/api/services/topo/${z}/${x}/${y}.png</p></section>
+					<section><img data-src="img/tileBalancer_hybrid.png"><p>https://XXXX.icgc.cat/api/services/hybrid/${z}/${x}/${y}.png</p></section>
+				</section>
+				<section>
+					<ul>
+						<li>Twitter - @ICGCGeostarters</li>
+						<li>https://betaportal.icgc.cat/</li>
+						<li>betaportal@icgc.cat</li>
+						<li><img src="img/logo_txt.svg" width="150px" style="border: none; box-shadow: none;"></li>
+					</ul>
+				</section>
+				<section data-background="img/final.png"></section>
+			</div>
+			<div class="line top"></div>
+			<div class="line bottom">
+				<img class="footer-logo" src="img/logo.svg">
 			</div>
 		</div>
 
